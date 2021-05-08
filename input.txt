@@ -1,0 +1,11 @@
+Petrenko Olexandr 01.01.2002 3 4 4 4
+Pavlenko Matviii 17.06.2003 5 5 5 5
+Horbovyi Vitalii 30.07.2003 5 5 5 4
+Prohorchyk Maria 11.08.2001 4 4 4 2
+Soroka Anastisia 22.02.2004 5 5 3 5
+Kylinuch Bogdann 22.05.2003 4 5 5 5
+Abramovich Ostap 12.07.2001 3 4 3 3
+Lytvinenko Julia 24.08.2003 4 3 3 2
+Borod Julia 20.10.2002 2 3 3 5
+Golovchuk Tarass 24.08.2003 3 3 3 5
+Marunchuk Ostap 01.09.2001 4 3 5 5

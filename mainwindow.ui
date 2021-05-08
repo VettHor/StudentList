@@ -1,0 +1,1268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1082</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Student List</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Icons/535572.png</normaloff>../../Icons/535572.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#MainWindow {
+background-color: #F0F0F0;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>711</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableWidget {
+border: 2px solid #3F3F3F;
+background-color: white;
+}</string>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>10</y>
+      <width>301</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Franklin Gothic Heavy</family>
+      <pointsize>22</pointsize>
+      <weight>50</weight>
+      <italic>true</italic>
+      <bold>false</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Available functions:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add_2">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>60</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>Add new student</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteNotSum">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>340</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>Delete students born not in the summer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sortAlphabet">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>200</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort in alphabetical order</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sortRate">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>130</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>Sort with rate in ascending order</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteWithNumb">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>410</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>Delete with number</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="DeleteNumb">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>160</y>
+      <width>351</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>[Deleting student with given number]</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Choose number:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_5">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>60</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px; 
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em; 
+    padding: 6px;
+	color: white;
+}
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="groupOK_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>120</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px; 
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em; 
+    padding: 6px;
+	color: white;
+}
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+QPushButton:pressed  { 
+   background-color: #FF0000;
+   border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>ОК</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="groupCancel_2">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>120</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px; 
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em; 
+    padding: 6px;
+	color: white;
+}
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+QPushButton:pressed  { 
+   background-color: #FF0000;
+   border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="deleteHigher4_5">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>270</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+    </property>
+    <property name="text">
+     <string>Delete students with mark higher than 4.5</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupAdd">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>110</y>
+      <width>361</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>[Adding new student]</string>
+    </property>
+    <widget class="QPushButton" name="groupOK">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>190</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>ОК</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="groupCancel">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>190</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>345</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="name">
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <property name="cursorMoveStyle">
+         <enum>Qt::LogicalMoveStyle</enum>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Name:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Exam grades:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="surname">
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Birth:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Surname:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QDateEdit" name="dateEdit">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <property name="styleSheet">
+           <string notr="true">QComboBox{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px; 
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 2em; 
+    padding: 3px;
+	color: white;
+}
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_2">
+          <property name="styleSheet">
+           <string notr="true">QComboBox{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px; 
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 2em; 
+    padding: 3px;
+	color: white;
+}
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_3">
+          <property name="styleSheet">
+           <string notr="true">QComboBox{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px; 
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 2em; 
+    padding: 3px;
+	color: white;
+}
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_4">
+          <property name="styleSheet">
+           <string notr="true">QComboBox{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px; 
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 2em; 
+    padding: 3px;
+	color: white;
+}
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>130</y>
+      <width>361</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>[Deleting]</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>40</y>
+       <width>351</width>
+       <height>116</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QRadioButton" name="radioButton">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Students with mark higher than 4.5</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Students born not in the summer</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_3">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>With given number</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="groupOK_3">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>160</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>ОК</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="groupCancel_3">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>160</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>130</y>
+      <width>351</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Sort</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>40</y>
+       <width>351</width>
+       <height>83</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QRadioButton" name="radioButton_4">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>With rate in ascending order</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_5">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>In alphabetical order</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="groupOK_4">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>140</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>ОК</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="groupCancel_4">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>140</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: #DC143C;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 15px;
+    border-color: #3F3F3F;
+    font: bold 14px;
+    min-width: 5em;
+    padding: 6px;
+	color: white;
+}
+
+QPushButton:hover  {
+    background-color: #3F3F3F;
+    border-style: inset;
+}
+
+QPushButton:pressed  {
+    background-color: #FF4500;
+    border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>groupAdd</zorder>
+   <zorder>tableWidget</zorder>
+   <zorder>label</zorder>
+   <zorder>add_2</zorder>
+   <zorder>deleteNotSum</zorder>
+   <zorder>sortAlphabet</zorder>
+   <zorder>sortRate</zorder>
+   <zorder>deleteWithNumb</zorder>
+   <zorder>deleteHigher4_5</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>DeleteNumb</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1082</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="separator"/>
+    <addaction name="Exit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="action_Add_student_to_list"/>
+    <addaction name="actionSort_student_list"/>
+    <addaction name="actionSort_student_list_in_alphabetical_order"/>
+    <addaction name="actionDelete_student_from_list"/>
+    <addaction name="actionDelete_students_not_in_the_summer"/>
+    <addaction name="actionDelete_students_higher_4_5"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>&amp;About</string>
+    </property>
+    <addaction name="actionAbout_program"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolBar {
+	background-color: #DC143C;
+}</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>35</width>
+     <height>28</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="open"/>
+   <addaction name="save"/>
+   <addaction name="actionAddStudent"/>
+   <addaction name="DelStud"/>
+   <addaction name="Sort"/>
+   <addaction name="delete_2"/>
+   <addaction name="END"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Open&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Save&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="open">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Icons/open-file-icon.png</normaloff>../../Icons/open-file-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open list</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Open &amp;quot;input.txt&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="save">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Icons/save-file-icon.png</normaloff>../../Icons/save-file-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save list</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Save to &amp;quot;output.txt&amp;quot;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="delete_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Icons/trash-bin.svg</normaloff>../../Icons/trash-bin.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Delete List</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Delete student list&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="END">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Icons/485963.svg</normaloff>../../Icons/485963.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Turn off</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Turn off the program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="Exit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Exit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionAddStudent">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Icons/add-user-icon.png</normaloff>../../Icons/add-user-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>AddStudent</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Add student&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="DelStud">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Icons/remove-user-icon.png</normaloff>../../Icons/remove-user-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>DeleteStudent</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Delete students&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="Sort">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Icons/Actions-view-sort-descending-icon.png</normaloff>../../Icons/Actions-view-sort-descending-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sort</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;Sort student list&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="action_Add_student_to_list">
+   <property name="text">
+    <string>&amp;Add new student</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionDelete_student_from_list">
+   <property name="text">
+    <string>&amp;Delete with number</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionSort_student_list">
+   <property name="text">
+    <string>&amp;Sort with rate in ascending order</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionAbout_program">
+   <property name="text">
+    <string>&amp;About program</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionDelete_students_not_in_the_summer">
+   <property name="text">
+    <string>&amp;Delete students born not in the summer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+  </action>
+  <action name="actionDelete_students_higher_4_5">
+   <property name="text">
+    <string>&amp;Delete students with mark higher than 4.5</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actionSort_student_list_in_alphabetical_order">
+   <property name="text">
+    <string>&amp;Sort in alphabetical order</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
